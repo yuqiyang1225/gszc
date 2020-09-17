@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>早茶之习_答题练习10</title>
+<style type="text/css">
+	<!--首页背景样式-->
+	.a1 {
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 900px;
+		height: 500px;
+		}
+	.g1 {
+		position:absolute;
+		left:50%;
+		margin-left:-290px;
+		top:80px;
+		opacity:0.5;
+		}
+	.g2 {
+		position:absolute;
+		left:50%;
+		margin-left:-410px;
+		top:10px;
+		}
+	
+	
+	#timu{
+		position: absolute;
+		top:150px;
+		left:50%;
+		margin-left: -280px;
+		width: 580px;
+		height: 250px;
+		font-family: 华文行楷;
+	}
+	#timu ul{
+		font-size: 18pt;
+	}
+	#anniu1{
+		position: absolute;
+		top:90px;
+		left:50%;
+		margin-left: -200px;
+	}
+	#anniu2{
+		position: absolute;
+		top:90px;
+		left:50%;
+		margin-left: 50px;
+	}
+	#anniu3{
+		position: absolute;
+		top:150px;
+		left:50%;
+		margin-left: -200px;
+	}
+	#anniu4{
+		position: absolute;
+		top:150px;
+		left:50%;
+		margin-left: 50px;
+	}
+	#tijiao{
+		position: absolute;
+		top:200px;
+		left:50%;
+		margin-left: -60px;
+		width: 70px;
+		height: 40px;
+		font-size: 18pt;
+		font-weight: bolder;
+		font-family: 华文行楷;
+		background-color:#B9F3EC;
+		color:#050303;
+		border-radius: 5px;
+	}
+	#tijiao:hover{
+		width: 72px;
+		height: 42px;
+	}
+	#true{
+		position: absolute;
+		top:70px;
+		left: 50%;
+		margin-left: 0px;
+	}
+	#false2{
+		position: absolute;
+		top:70px;
+		left: 50%;
+		margin-left: -250px;
+	}
+	#tishi{
+		position: absolute;
+		top: 206px;
+		left: 300px;
+		font-size: 18pt;
+		color: #DF4446;
+		font-weight: bolder;
+	}
+	#return{
+		position: absolute;
+		top:520px;
+		left:50px;
+	}
+	#return:hover{
+		cursor: pointer;
+		transform:scale(1.1);
+	}
+	.xuanzhong{
+		color: #F40206;
+	}
+	.buxuanzhong{
+		color: #000000;
+	}
+	#xyy{
+		position: absolute;
+		top:280px;
+		left:850px;
+	}
+	#xyy:hover{
+		width: 140px;
+		height: 90px;
+	}
+
+	.z1 {
+		position:absolute;
+		left:50%;
+		margin-left:260px;
+		top:20px;
+		}
+	.z1:hover
+		{
+		transform:scale(1.1);
+		cursor:pointer;
+		border:none;
+		}
+	.z11 {
+		position:absolute;
+		left:50%;
+		margin-left:300px;
+		top:420px;
+		}
+	.z11:hover
+		{
+		transform:scale(1.1);
+		cursor:pointer;
+		border:none;
+		}
+	.z12 {
+		position:absolute;
+		left:50%;
+		margin-left:-430px;
+		top:420px;
+		}
+	.z12:hover
+		{
+		transform:scale(1.1);
+		cursor:pointer;
+		border:none;
+		}
+	</style>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery-ui-effects.custom.min.js"></script>
+<script type="text/javascript">
+function myfunction()
+	{
+		var daan=document.myform.answer.value;
+		var audio1 = document.getElementById('music1'); 
+		var audio2 = document.getElementById('music2');
+
+		if(daan=="answer1")
+			{
+				document.getElementById("false2").style.display="block";
+				document.getElementById("true").style.display="none";
+				audio2.play();
+			}
+		else if(daan=="answer2")
+			{
+				document.getElementById("true").style.display="block";
+				document.getElementById("false2").style.display="none";
+				audio1.play();
+			}
+		else
+			{
+				document.getElementById("tishi").style.display="block";
+				document.getElementById("true").style.display="none";
+				document.getElementById("false2").style.display="none";
+				audio2.play();
+			}
+	}
+
+</script>
+
+
+</head>
+
+<body>
+	<div class="a1" width="900px" height="500px" align="center">
+	  <img src="images/index_1.jpg" width="900px" height="500px"> 
+	  <div class="g1">
+		    <img src="images/datiban.png" width="600" alt="答题板"> 
+		</div>
+    		  <div class="g2">
+       	    <img src="images/dtlx.png" width="160" alt="答题练习"> 
+				</div>    
+           	  
+	<div id="timu">
+	<h2>10.“睇数”和“埋单”不是一个意思。</h2>
+	<form action="" method="post" name="myform" id="myform">
+		<ul style="list-style: none">
+		<li id="anniu1">
+		<input type="radio" value="answer1" name="answer" onClick="javascript:anniu1.className='xuanzhong';anniu2.className='buxuanzhong';anniu3.className='buxuanzhong';anniu4.className='buxuanzhong';">A.对</li>
+		<li id="anniu2">
+		<input type="radio" value="answer2" name="answer" onClick="javascript:anniu2.className='xuanzhong';anniu1.className='buxuanzhong';anniu3.className='buxuanzhong';anniu4.className='buxuanzhong';">B.错</li>
+		
+		</ul>
+		<input type="button" value="提交" name="submit" id="tijiao" onClick="myfunction()">
+		<img src="images/true.png" alt="对" width="50px" height="50px" id="true" style="display: none">
+	    <img src="images/false.png" alt="错" width="50px" height="50px" id="false2" style="display: none">
+	    <div id="tishi" style="display: none">还没答题哦！</div>
+	</form>
+		 <audio id="music1" controls preload hidden>
+	     <source src="music/true.wav" type="audio/wav">	
+	     </audio>
+	     <audio id="music2" controls preload hidden>
+	     <source src="music/false.mp3" type="audio/mp3">	
+	     </audio>
+	     </div>
+   	        <div class="z1">
+	        <a href="custom.html"><img src="images/fanhui.png" width="150" alt="返回"></a>
+	        </div>
+	        <div class="z12">
+	        <a href="test_9.html"><img src="images/syiti.png" width="135" alt="上一题"></a>
+	        </div>
+	</div>
+</body>
+</html>
+
